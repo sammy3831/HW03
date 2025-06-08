@@ -8,13 +8,18 @@ int main()
 {
 	SimpleVector<int> vec(8);
 	vec.push_back(10);
-	vec.push_back(20);
-	vec.push_back(30);
-	vec.push_back(40);
-	vec.push_back(50);
+	vec.push_back(25);
+	vec.push_back(36);
+	vec.push_back(12);
+	vec.push_back(8);
+	vec.push_back(63);
+	vec.push_back(99);
+	vec.push_back(33);
+	vec.push_back(77);
 
-	vec.push_back(60);
+	vec.printData();
 
+	vec.sortData();
 	vec.printData();
 
 	cout << vec.size() << endl;
@@ -23,9 +28,19 @@ int main()
 	vec.pop_back();
 	vec.pop_back();
 	vec.pop_back();
+	vec.pop_back();
+	vec.pop_back();
 
 	vec.printData();
 	cout << vec.size() << endl;
 	cout << vec.capacity() << endl;
+
+	vec.resize(15);
+	cout << vec.size() << endl;
+	cout << vec.capacity() << endl;
+
+	SimpleVector<int> vec2{vec};
+	vec2.printData();
+
 }
 
